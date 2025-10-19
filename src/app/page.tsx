@@ -103,7 +103,7 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center pt-4">
+                <div className="grid grid-cols-3 gap-4 text-center pt-4">
                   <div>
                     <p className="text-4xl font-bold">200+</p>
                     <p className="text-muted-foreground text-sm">Satisfied Customers</p>
