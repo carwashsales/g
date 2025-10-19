@@ -76,14 +76,14 @@ export default function Home() {
         <section id="about" className="py-12 md:py-16 bg-background">
           <div className="container px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="relative h-full">
+              <div className="relative">
                 {aboutImage && (
                   <Image
                     src={aboutImage.imageUrl}
                     alt={aboutImage.description}
                     width={550}
-                    height={550}
-                    className="rounded-lg object-cover w-full h-full"
+                    height={100}
+                    className="rounded-lg object-cover w-full h-[100px]"
                     data-ai-hint={aboutImage.imageHint}
                   />
                 )}
