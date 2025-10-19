@@ -83,7 +83,7 @@ export default function Home() {
                     alt={aboutImage.description}
                     width={550}
                     height={550}
-                    className="rounded-lg object-cover w-full aspect-square"
+                    className="rounded-lg object-cover w-full h-full"
                     data-ai-hint={aboutImage.imageHint}
                   />
                 )}
