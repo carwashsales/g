@@ -132,14 +132,15 @@ export default function Home() {
                 We provide a wide range of professional cleaning services to meet your specific needs.
               </p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="flex flex-col items-center text-center p-6 bg-card hover:shadow-xl transition-shadow duration-300">
-                  <div className="p-4 bg-primary/10 rounded-full mb-4">
-                    <service.icon className="h-8 w-8 text-primary" />
+                <Card key={index} className="flex flex-col items-center text-center p-4 md:p-6 bg-card hover:shadow-xl transition-shadow duration-300">
+                  <div className="p-3 md:p-4 bg-primary/10 rounded-full mb-3 md:mb-4">
+                    <service.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 font-headline">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="text-base md:text-xl font-semibold mb-2 font-headline">{service.title}</h3>
+                  <p className="text-muted-foreground hidden md:block">{service.description}</p>
+                  <Link href="#" className="text-primary text-sm mt-2 md:hidden">Read More</Link>
                 </Card>
               ))}
             </div>
