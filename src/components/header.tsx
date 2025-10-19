@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Menu, Search, MapPin, Mail, Phone, Globe, Facebook, Linkedin, Twitter, Rss } from 'lucide-react';
@@ -7,10 +8,10 @@ import { Input } from './ui/input';
 
 const navLinks = [
   { href: '#', label: 'Home' },
-  { href: '#', label: 'About' },
+  { href: '#about', label: 'About' },
   { href: '#services', label: 'Service' },
-  { href: '#', label: 'Pages' },
-  { href: '#', label: 'Blog' },
+  { href: '#faq', label: 'Pages' },
+  { href: '#testimonials', label: 'Blog' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -21,24 +22,24 @@ export default function Header() {
       <div className="bg-secondary/30 text-sm text-muted-foreground">
         <div className="container px-4 md:px-6 flex h-10 items-center justify-between">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2">
               <span>Follow Us:</span>
               <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
               <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
               <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
               <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
             </div>
-            <div className="hidden md:flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <Phone size={16} className="text-primary" />
               <span>+256 705 027 536</span>
             </div>
-             <div className="hidden md:flex items-center gap-2">
+             <div className="hidden lg:flex items-center gap-2">
               <Phone size={16} className="text-primary" />
               <span>+256 776 126 334</span>
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <div className="hidden md:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-2">
               <MapPin size={16} className="text-primary" />
               <span>P.O.BOX 190832, KAMPALA, (U)</span>
             </div>
@@ -73,7 +74,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-2 sm:space-x-4">
            <div className="hidden md:flex items-center relative">
              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
              <Input placeholder="Search Products..." className="pl-9 bg-secondary/30 border-0" />
@@ -113,3 +114,5 @@ export default function Header() {
     </header>
   );
 }
+
+    

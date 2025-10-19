@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { faqs, services } from '@/lib/data';
+import { faqs, services, testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -28,7 +28,6 @@ import ServiceMap from '@/components/service-map';
 import type { Testimonial } from '@/lib/types';
 import VideoModal from '@/components/video-modal';
 import { PlayCircle } from 'lucide-react';
-import { testimonials } from '@/lib/data';
 
 
 export default function Home() {
@@ -104,7 +103,7 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
                 </p>
-                <div className="grid grid-cols-3 gap-4 text-center pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center pt-4">
                   <div>
                     <p className="text-4xl font-bold">200+</p>
                     <p className="text-muted-foreground text-sm">Satisfied Customers</p>
@@ -227,7 +226,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <Card>
               <div className="grid lg:grid-cols-2">
-                <div className="p-8">
+                <div className="p-6 md:p-8">
                   <h2 className="text-3xl md:text-4xl font-bold font-headline">Get In Touch</h2>
                   <p className="text-muted-foreground mt-2 mb-8">
                     Have questions or need a custom solution? Send us a message and we'll get back to you shortly.
@@ -262,3 +261,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
