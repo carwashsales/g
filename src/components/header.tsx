@@ -30,17 +30,21 @@ export default function Header() {
             </div>
             <div className="hidden md:flex items-center gap-2">
               <Phone size={16} className="text-primary" />
-              <span>(123) 777 - 5643</span>
+              <span>+256 705 027 536</span>
+            </div>
+             <div className="hidden md:flex items-center gap-2">
+              <Phone size={16} className="text-primary" />
+              <span>+256 776 126 334</span>
             </div>
           </div>
           <div className="flex items-center gap-6">
             <div className="hidden md:flex items-center gap-2">
               <MapPin size={16} className="text-primary" />
-              <span>New York, NY 10038, United</span>
+              <span>P.O.BOX 190832, KAMPALA, (U)</span>
             </div>
              <div className="hidden md:flex items-center gap-2">
               <Mail size={16} className="text-primary" />
-              <span>example@gmail.com</span>
+              <span>egcleannestfacilities@gmail.com</span>
             </div>
             <div className="hidden sm:flex items-center gap-1">
               <Globe size={16} />

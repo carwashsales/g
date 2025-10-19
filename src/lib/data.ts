@@ -1,4 +1,4 @@
-import { Home, Building, Factory, Wind, SprayCan, Sparkles } from 'lucide-react';
+import { Home, Building, Factory, Wind, SprayCan, Sparkles, Droplets, Trash2, Car, Shrub, Construction, Hand, Scissors } from 'lucide-react';
 import type { Icon as LucideIcon } from 'lucide-react';
 import type { Testimonial } from '@/lib/types';
 
@@ -18,34 +18,74 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    icon: Home,
-    title: 'Residential Cleaning',
-    description: 'Complete home cleaning services, from apartments to large houses. We make your home sparkle.',
+    icon: Sparkles,
+    title: 'Floor cleaning',
+    description: 'Comprehensive floor cleaning for all types of surfaces.',
   },
   {
     icon: Building,
-    title: 'Commercial Cleaning',
-    description: 'Professional cleaning for offices, retail spaces, and other commercial establishments.',
+    title: 'Office cleaning',
+    description: 'Keeping your workspace clean, professional, and productive.',
   },
   {
-    icon: Factory,
-    title: 'Industrial Cleaning',
-    description: 'Specialized cleaning solutions for factories, warehouses, and industrial facilities.',
+    icon: Home,
+    title: 'Domestic cleaning',
+    description: 'Reliable and thorough cleaning for your home.',
   },
   {
     icon: Wind,
-    title: 'Air Duct Cleaning',
-    description: 'Improve your indoor air quality with our thorough air duct and ventilation cleaning.',
+    title: 'Fumigation & pest control',
+    description: 'Effective solutions to eliminate pests and ensure a healthy environment.',
+  },
+  {
+    icon: Shrub,
+    title: 'Land scaping & Gardening',
+    description: 'Maintaining beautiful and healthy outdoor spaces.',
+  },
+  {
+    icon: Car,
+    title: 'Move in and Move out Cleaning',
+    description: 'Ensuring a clean transition for new and vacating tenants.',
+  },
+  {
+    icon: Hand,
+    title: 'Supply of Liquid Soap',
+    description: 'Providing high-quality liquid soap for your facility.',
+  },
+  {
+    icon: Construction,
+    title: 'Post construction cleaning',
+    description: 'Cleaning up dust and debris after construction projects.',
+  },
+  {
+    icon: Droplets,
+    title: 'Janitorial Hygiene solutions',
+    description: 'Complete hygiene solutions for restrooms and common areas.',
   },
   {
     icon: SprayCan,
-    title: 'Deep Cleaning & Disinfection',
-    description: 'Intensive cleaning and disinfection services for a healthier environment.',
+    title: 'Carpet & upholstery cleaning',
+    description: 'Deep cleaning for carpets and furniture to restore their look.',
+  },
+  {
+    icon: Scissors,
+    title: 'Compound slashing',
+    description: 'Clearing and maintaining overgrown compounds and large areas.',
+  },
+  {
+    icon: Factory,
+    title: 'Office support',
+    description: 'Providing support services to keep your office running smoothly.',
+  },
+  {
+    icon: Trash2,
+    title: 'After Events Cleaning',
+    description: 'Quick and efficient cleanup after your events.',
   },
   {
     icon: Sparkles,
-    title: 'Post-Construction Cleaning',
-    description: 'We handle the dust and debris after your construction or renovation project is complete.',
+    title: 'Deep cleaning',
+    description: 'Intensive and detailed cleaning for a pristine finish.',
   },
 ];
 
@@ -78,7 +118,7 @@ export type Faq = {
 export const faqs: Faq[] = [
   {
     question: 'What cleaning services do you offer?',
-    answer: 'We offer a wide range of services including residential, commercial, industrial, deep cleaning, and post-construction cleaning. Check out our services section for more details.',
+    answer: 'We offer a wide range of services including floor, office, domestic, fumigation, landscaping, post-construction cleaning, and more. Check our services section for a full list.',
   },
   {
     question: 'Are your cleaning products eco-friendly?',
@@ -94,6 +134,6 @@ export const faqs: Faq[] = [
   },
   {
     question: 'What is your service area?',
-    answer: 'We primarily serve the greater New York area. You can view our service area map on our website for more specific locations.',
+    answer: 'We primarily serve the Kampala, Uganda area. You can view our service area map on our website for more specific locations.',
   },
 ];

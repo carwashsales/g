@@ -1,4 +1,4 @@
-import { Twitter, Facebook, Instagram } from 'lucide-react';
+import { Twitter, Facebook, Instagram, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Logo from './logo';
 
@@ -30,8 +30,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold font-headline mb-4">Contact Us</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>example@gmail.com</li>
-              <li>New York, NY 10038, United</li>
+              <li>egcleannestfacilities@gmail.com</li>
+              <li><div className="flex items-center gap-2"><Phone size={16} /> +256 705 027 536</div></li>
+              <li><div className="flex items-center gap-2"><Phone size={16} /> +256 776 126 334</div></li>
+              <li>P.O.BOX 190832, KAMPALA, (U) Kirombe, Butabika road</li>
             </ul>
           </div>
            <div>

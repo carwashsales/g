@@ -25,7 +25,6 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { QuoteForm } from '@/components/quote-form';
 import ServiceMap from '@/components/service-map';
-import { ArrowRight } from 'lucide-react';
 import type { Testimonial } from '@/lib/types';
 
 
@@ -39,11 +38,11 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-[#0d3c87] to-[#1e57b1] w-full text-white overflow-hidden">
-          <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-8 items-center min-h-[80vh] py-20">
+          <div className="container grid lg:grid-cols-2 gap-8 items-center min-h-[80vh] py-20 px-4 md:px-6">
             <div className="relative z-10 space-y-6">
               <p className="font-semibold text-sm tracking-widest text-gray-300 uppercase">■ CLEANER COMPANY</p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                Create a Clean Space Comparable to Mine.
+                "Your Hygiene is Our Priority"
               </h1>
               <p className="max-w-[600px] text-gray-300 text-lg">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -54,18 +53,19 @@ export default function Home() {
             </div>
             
             <div className="relative h-full flex items-center justify-center">
-              {heroImage && (
-                <Image
-                  src={heroImage.imageUrl}
-                  alt={heroImage.description}
-                  width={600}
-                  height={800}
-                  className="object-contain"
-                  priority
-                  data-ai-hint={heroImage.imageHint}
-                />
-              )}
-               <div className="absolute right-0 bottom-0 lg:relative lg:bottom-auto lg:right-auto w-full max-w-md">
+               <div className="lg:absolute lg:inset-0 lg:left-1/2">
+                {heroImage && (
+                  <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    fill
+                    className="object-contain"
+                    priority
+                    data-ai-hint={heroImage.imageHint}
+                  />
+                )}
+              </div>
+               <div className="relative right-0 bottom-0 lg:relative lg:bottom-auto lg:right-auto w-full max-w-md mt-8 lg:mt-0">
                  <QuoteForm />
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function Home() {
             <div>
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Service Area</h2>
-                <p className="text-muted-foreground mt-2">We proudly serve New York, NY and surrounding areas.</p>
+                <p className="text-muted-foreground mt-2">We proudly serve Kampala, Uganda and surrounding areas.</p>
               </div>
               <ServiceMap />
             </div>
@@ -180,7 +180,7 @@ export default function Home() {
                   <p className="text-muted-foreground mt-2 mb-8">
                     Have questions or need a custom solution? Send us a message and we'll get back to you shortly.
                   </p>
-                  <form action="mailto:example@gmail.com" method="post" encType="text/plain" className="space-y-4">
+                  <form action="mailto:egcleannestfacilities@gmail.com" method="post" encType="text/plain" className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <Input name="name" placeholder="Your Name" required />
                       <Input name="email" type="email" placeholder="Your Email" required />
