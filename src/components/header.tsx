@@ -20,36 +20,106 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Top bar */}
       <div className="bg-secondary/30 text-sm text-muted-foreground">
-        <div className="container px-4 md:px-6 flex h-10 items-center justify-between">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <span>Follow Us:</span>
-              <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
-              <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
-              <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
-              <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
+        <div className="container px-4 md:px-6 h-10 flex items-center overflow-hidden">
+          <div className="w-full flex items-center justify-center md:justify-between">
+            {/* Desktop View */}
+            <div className="hidden md:flex items-center gap-6 w-full">
+              <div className="flex items-center gap-2">
+                <span>Follow Us:</span>
+                <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
+                <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
+                <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
+                <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={16} className="text-primary" />
+                <span>+256 705 027 536</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={16} className="text-primary" />
+                <span>+256 776 126 334</span>
+              </div>
             </div>
-            <div className="hidden sm:flex items-center gap-2">
-              <Phone size={16} className="text-primary" />
-              <span>+256 705 027 536</span>
+             <div className="hidden md:flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <MapPin size={16} className="text-primary" />
+                <span>P.O.BOX 190832, KAMPALA, (U)</span>
+              </div>
+               <div className="flex items-center gap-2">
+                <Mail size={16} className="text-primary" />
+                <span>egcleannestfacilities@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Globe size={16} />
+                <span>English</span>
+              </div>
             </div>
-             <div className="hidden lg:flex items-center gap-2">
-              <Phone size={16} className="text-primary" />
-              <span>+256 776 126 334</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="hidden lg:flex items-center gap-2">
-              <MapPin size={16} className="text-primary" />
-              <span>P.O.BOX 190832, KAMPALA, (U)</span>
-            </div>
-             <div className="hidden md:flex items-center gap-2">
-              <Mail size={16} className="text-primary" />
-              <span>egcleannestfacilities@gmail.com</span>
-            </div>
-            <div className="hidden sm:flex items-center gap-1">
-              <Globe size={16} />
-              <span>English</span>
+
+            {/* Mobile Marquee */}
+            <div className="md:hidden flex-shrink-0 whitespace-nowrap">
+              <div className="inline-block animate-marquee">
+                <span className="inline-flex items-center gap-6 px-6">
+                  <span className="flex items-center gap-2">
+                    <span>Follow Us:</span>
+                    <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
+                    <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
+                    <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
+                    <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Phone size={16} className="text-primary" />
+                    <span>+256 705 027 536</span>
+                  </span>
+                   <span className="flex items-center gap-2">
+                    <Phone size={16} className="text-primary" />
+                    <span>+256 776 126 334</span>
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <MapPin size={16} className="text-primary" />
+                    <span>P.O.BOX 190832, KAMPALA, (U)</span>
+                  </span>
+                   <span className="flex items-center gap-2">
+                    <Mail size={16} className="text-primary" />
+                    <span>egcleannestfacilities@gmail.com</span>
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Globe size={16} />
+                    <span>English</span>
+                  </span>
+                </span>
+              </div>
+              {/* Duplicate for seamless loop */}
+              <div className="inline-block animate-marquee">
+                <span className="inline-flex items-center gap-6 px-6">
+                  <span className="flex items-center gap-2">
+                    <span>Follow Us:</span>
+                    <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
+                    <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
+                    <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
+                    <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Phone size={16} className="text-primary" />
+                    <span>+256 705 027 536</span>
+                  </span>
+                   <span className="flex items-center gap-2">
+                    <Phone size={16} className="text-primary" />
+                    <span>+256 776 126 334</span>
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <MapPin size={16} className="text-primary" />
+                    <span>P.O.BOX 190832, KAMPALA, (U)</span>
+                  </span>
+                   <span className="flex items-center gap-2">
+                    <Mail size={16} className="text-primary" />
+                    <span>egcleannestfacilities@gmail.com</span>
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Globe size={16} />
+                    <span>English</span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
