@@ -25,12 +25,12 @@ import Footer from '@/components/footer';
 import { QuoteForm } from '@/components/quote-form';
 import ServiceMap from '@/components/service-map';
 import { ArrowRight } from 'lucide-react';
+import { testimonials } from '@/lib/data';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
-  const testimonials = [];
-
+  
   return (
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
@@ -53,7 +53,7 @@ export default function Home() {
               Impeccable Cleaning, Every Time.
             </h1>
             <p className="max-w-[700px] mx-auto text-lg md:text-xl text-gray-200 mb-8">
-              CleanNest Hub offers premium cleaning solutions for homes and businesses. Experience a new level of clean.
+              E & G Cleannest Facilities Ltd offers premium cleaning solutions for homes and businesses. Experience a new level of clean.
             </p>
             <Button size="lg" asChild>
               <Link href="#quote">

@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'CleanNest Hub',
+  title: 'E & G Cleannest Facilities Ltd',
   description: 'Impeccable Cleaning, Every Time. Your one-stop solution for professional cleaning services.',
 };
 

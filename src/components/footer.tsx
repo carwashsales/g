@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Logo className="h-12 w-12" />
-              <span className="font-bold text-lg font-headline">CleanNest Hub</span>
+              <span className="font-bold text-lg font-headline">E & G Cleannest</span>
             </Link>
             <p className="text-muted-foreground">Professional cleaning services for a sparkling clean space.</p>
             <div className="flex space-x-4">
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} CleanNest Hub. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} E & G Cleannest Facilities Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

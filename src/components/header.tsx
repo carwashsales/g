@@ -12,7 +12,7 @@ export default function Header() {
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo className="h-12 w-12" />
-            <span className="font-bold font-headline sm:inline-block">CleanNest Hub</span>
+            <span className="font-bold font-headline hidden sm:inline-block">E & G Cleannest</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm md:flex">
             {navLinks.map((link) => (
@@ -39,7 +39,7 @@ export default function Header() {
             <SheetContent side="left">
               <Link href="/" className="flex items-center space-x-2 mb-6">
                 <Logo className="h-12 w-12" />
-                <span className="font-bold font-headline">CleanNest Hub</span>
+                <span className="font-bold font-headline">E & G Cleannest</span>
               </Link>
               <div className="flex flex-col space-y-2">
                 {navLinks.map((link) => (
