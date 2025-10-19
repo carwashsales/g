@@ -58,9 +58,9 @@ export default function Header() {
         </Link>
         
         <nav className="hidden items-center gap-6 text-sm lg:flex flex-1 justify-center">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <Link
-              key={link.href}
+              key={`${link.label}-${index}`}
               href={link.href}
               className="transition-colors hover:text-primary font-medium"
             >
@@ -90,8 +90,8 @@ export default function Header() {
                   <span className="font-bold text-xl">Neatsp</span>
                 </div>
                 <div className="flex flex-col space-y-2">
-                  {navLinks.map((link) => (
-                    <SheetClose asChild key={link.href}>
+                  {navLinks.map((link, index) => (
+                    <SheetClose asChild key={`${link.label}-${index}-mobile`}>
                       <Link
                         href={link.href}
                         className="text-foreground/80 hover:text-primary rounded-md p-2 text-lg"
