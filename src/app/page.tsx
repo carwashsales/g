@@ -53,12 +53,12 @@ export default function Home() {
             />
           )}
           <div className="container relative z-20 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-20 px-4 md:px-6">
-            <div className="lg:col-span-3 space-y-6">
+            <div className="lg:col-span-3 space-y-6 text-center lg:text-left">
               <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER COMPANY</p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 "Your Hygiene is Our Priority"
               </h1>
-              <p className="max-w-[600px] text-gray-300 text-lg">
+              <p className="max-w-[600px] text-gray-300 text-lg mx-auto lg:mx-0">
               We offer professional, high-quality cleaning services for your home and office. Our team is dedicated to providing you with a clean and healthy environment.
               </p>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -66,7 +66,7 @@ export default function Home() {
               </Button>
             </div>
             
-            <div className="lg:col-span-2 w-full">
+            <div className="lg:col-span-2 w-full hidden lg:block">
               <QuoteForm />
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
         <section id="about" className="py-12 md:py-16 bg-background">
           <div className="container px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="relative">
+              <div className="relative h-full">
                 {aboutImage && (
                   <Image
                     src={aboutImage.imageUrl}

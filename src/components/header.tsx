@@ -22,14 +22,14 @@ export default function Header() {
       <div className="bg-secondary/30 text-sm text-muted-foreground">
         <div className="container px-4 md:px-6 flex h-10 items-center justify-between">
           <div className="flex items-center gap-6">
-            <div className="hidden sm:flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <span>Follow Us:</span>
               <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
               <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
               <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
               <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2">
               <Phone size={16} className="text-primary" />
               <span>+256 705 027 536</span>
             </div>
@@ -75,40 +75,38 @@ export default function Header() {
         </nav>
 
         <div className="flex flex-1 items-center justify-end space-x-2 sm:space-x-4">
-           <div className="hidden md:flex items-center relative">
-             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-             <Input placeholder="Search Products..." className="pl-9 bg-secondary/30 border-0" />
+           <div className="flex items-center relative">
+             <Search className="h-5 w-5 text-muted-foreground" />
+             <Input placeholder="Search Products..." className="hidden md:block pl-9 bg-secondary/30 border-0" />
            </div>
 
           {/* Mobile Nav */}
-          <div className="lg:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <div className="flex items-center space-x-2 mb-6">
-                  <Logo className="h-8 w-auto" />
-                  <span className="font-bold text-xl">E & G Cleanest</span>
-                </div>
-                <div className="flex flex-col space-y-2">
-                  {navLinks.map((link, index) => (
-                    <SheetClose asChild key={`${link.label}-${index}-mobile`}>
-                      <Link
-                        href={link.href}
-                        className="text-foreground/80 hover:text-primary rounded-md p-2 text-lg"
-                      >
-                        {link.label}
-                      </Link>
-                    </SheetClose>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="lg:hidden">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <div className="flex items-center space-x-2 mb-6">
+                <Logo className="h-8 w-auto" />
+                <span className="font-bold text-xl">E & G Cleanest</span>
+              </div>
+              <div className="flex flex-col space-y-2">
+                {navLinks.map((link, index) => (
+                  <SheetClose asChild key={`${link.label}-${index}-mobile`}>
+                    <Link
+                      href={link.href}
+                      className="text-foreground/80 hover:text-primary rounded-md p-2 text-lg"
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
