@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Neatsp',
-  description: 'Create a Clean Space Comparable to Mine.',
+  title: 'E & G Cleanest Facilities Ltd',
+  description: 'Professional cleaning services by E & G Cleanest Facilities Ltd.',
 };
 
 export default function RootLayout({
