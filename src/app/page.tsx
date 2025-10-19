@@ -98,7 +98,7 @@ export default function Home() {
               <div className="space-y-4">
                 <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                  Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-green-400" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
+                  Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-primary" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
                 </h2>
                 <p className="text-muted-foreground">
                   Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
@@ -261,5 +261,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
