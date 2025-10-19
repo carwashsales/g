@@ -82,8 +82,8 @@ export default function Home() {
                     src={aboutImage.imageUrl}
                     alt={aboutImage.description}
                     width={550}
-                    height={100}
-                    className="rounded-lg object-cover w-full h-[100px]"
+                    height={350}
+                    className="rounded-lg object-cover w-full h-[350px]"
                     data-ai-hint={aboutImage.imageHint}
                   />
                 )}
