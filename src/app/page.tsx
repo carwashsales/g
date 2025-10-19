@@ -58,7 +58,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 "Your Hygiene is Our Priority"
               </h1>
-              <p className="max-w-[600px] text-gray-300 text-lg mx-auto lg:mx-0">
+              <p className="max-w-[600px] text-muted-foreground text-lg mx-auto lg:mx-0">
               We offer professional, high-quality cleaning services for your home and office. Our team is dedicated to providing you with a clean and healthy environment.
               </p>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -262,3 +262,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
