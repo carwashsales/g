@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { faqs, services, testimonials } from '@/lib/data';
+import { faqs, services } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -29,6 +29,7 @@ import { ArrowRight } from 'lucide-react';
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
+  const testimonials = [];
 
   return (
     <div className="flex flex-col min-h-dvh bg-background">
@@ -65,7 +66,7 @@ export default function Home() {
 
         {/* Services Section */}
         <section id="services" className="py-12 md:py-24 bg-secondary/50">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Services</h2>
               <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
@@ -110,7 +111,7 @@ export default function Home() {
               className="w-full max-w-4xl mx-auto"
             >
               <CarouselContent>
-                {testimonials.map((testimonial, index) => {
+                {testimonials.map((testimonial: any, index) => {
                   const avatarImage = PlaceHolderImages.find(img => img.id === testimonial.avatarId);
                   return (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
