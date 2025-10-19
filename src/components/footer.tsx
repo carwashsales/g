@@ -1,3 +1,4 @@
+
 import { Twitter, Facebook, Instagram, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Logo from './logo';
@@ -5,7 +6,7 @@ import Logo from './logo';
 export default function Footer() {
   return (
     <footer className="bg-secondary/70 border-t">
-      <div className="container py-12">
+      <div className="container mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
