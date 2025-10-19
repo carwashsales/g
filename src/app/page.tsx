@@ -19,13 +19,14 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { faqs, services, testimonials, Testimonial } from '@/lib/data';
+import { faqs, services, testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { QuoteForm } from '@/components/quote-form';
 import ServiceMap from '@/components/service-map';
 import { ArrowRight } from 'lucide-react';
+import type { Testimonial } from '@/lib/types';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');

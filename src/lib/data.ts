@@ -1,5 +1,6 @@
 import { Home, Building, Factory, Wind, SprayCan, Sparkles } from 'lucide-react';
 import type { Icon as LucideIcon } from 'lucide-react';
+import type { Testimonial } from '@/lib/types';
 
 export const navLinks = [
   { href: '#services', label: 'Services' },
@@ -47,13 +48,6 @@ export const services: Service[] = [
     description: 'We handle the dust and debris after your construction or renovation project is complete.',
   },
 ];
-
-export type Testimonial = {
-  name: string;
-  role: string;
-  quote: string;
-  avatarId: string;
-};
 
 export const testimonials: Testimonial[] = [
   {
