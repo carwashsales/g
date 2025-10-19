@@ -26,11 +26,14 @@ import Footer from '@/components/footer';
 import { QuoteForm } from '@/components/quote-form';
 import ServiceMap from '@/components/service-map';
 import type { Testimonial } from '@/lib/types';
+import VideoModal from '@/components/video-modal';
+import { PlayCircle } from 'lucide-react';
 
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-cleaner');
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
+  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-video');
   
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
@@ -69,8 +72,59 @@ export default function Home() {
           </div>
         </section>
 
+        {/* About Section */}
+        <section id="about" className="py-12 md:py-24 bg-background">
+          <div className="container px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                {aboutImage && (
+                  <Image
+                    src={aboutImage.imageUrl}
+                    alt={aboutImage.description}
+                    width={550}
+                    height={650}
+                    className="rounded-lg object-cover w-full h-auto"
+                    data-ai-hint={aboutImage.imageHint}
+                  />
+                )}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <VideoModal videoUrl="https://www.youtube.com/embed/XMWYZ-uZjnQ">
+                    <button className="group">
+                      <PlayCircle className="h-20 w-20 text-white/70 backdrop-blur-sm rounded-full group-hover:text-white transition-colors group-hover:scale-110" />
+                    </button>
+                  </VideoModal>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                  Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-green-400" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
+                </h2>
+                <p className="text-muted-foreground">
+                  Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
+                </p>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <p className="text-4xl font-bold">200+</p>
+                    <p className="text-muted-foreground text-sm">Satisfied Customers</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold">87+</p>
+                    <p className="text-muted-foreground text-sm">Building Cleaned</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold">69+</p>
+                    <p className="text-muted-foreground text-sm">Clever Employees</p>
+                  </div>
+                </div>
+                <Button>Learn More About Us</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
-        <section id="services" className="py-12 md:py-24 bg-background">
+        <section id="services" className="py-12 md:py-24 bg-secondary/50">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Services</h2>
@@ -93,7 +147,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-12 md:py-24 bg-secondary/50">
+        <section id="testimonials" className="py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">What Our Clients Say</h2>
@@ -141,7 +195,7 @@ export default function Home() {
         </section>
 
         {/* Map and FAQ Section */}
-        <section id="faq" className="py-12 md:py-24">
+        <section id="faq" className="py-12 md:py-24 bg-secondary/50">
           <div className="container grid lg:grid-cols-2 gap-12 items-start px-4 md:px-6">
             <div>
               <div className="mb-8">
@@ -168,7 +222,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-12 md:py-24 bg-secondary/50">
+        <section id="contact" className="py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6">
             <Card>
               <div className="grid lg:grid-cols-2">

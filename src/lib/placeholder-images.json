@@ -29,6 +29,12 @@
       "description": "A friendly customer service representative on the phone.",
       "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYWxsJTIwY2VudGVyfGVufDB8fHx8MTc2MDg3MzY4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "call center"
+    },
+    {
+      "id": "about-video",
+      "description": "Two happy cleaners giving a thumbs up.",
+      "imageUrl": "https://images.unsplash.com/photo-1667725335393-3f5d14d45e6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbGVhbmVycyUyMHNtaWxpbmd8ZW58MHx8fHwxNzYwODgzNzE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cleaners smiling"
     }
   ]
 }
