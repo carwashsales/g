@@ -30,6 +30,7 @@ import VideoModal from '@/components/video-modal';
 import { PlayCircle } from 'lucide-react';
 
 
+// Main Home Page Component
 export default function Home() {
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-video');
