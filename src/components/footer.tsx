@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
               <Logo className="h-12 w-12" />
               <span className="font-bold text-lg font-headline">E & G Cleannest</span>
-            </Link>
+            </div>
             <p className="text-muted-foreground">Professional cleaning services for a sparkling clean space.</p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></Link>
