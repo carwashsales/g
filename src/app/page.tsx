@@ -28,45 +28,52 @@ import ServiceMap from '@/components/service-map';
 import { ArrowRight } from 'lucide-react';
 import type { Testimonial } from '@/lib/types';
 
+
 export default function Home() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-cleaner');
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
   
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
+    <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 container px-4 md:px-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 font-headline">
-              Impeccable Cleaning, Every Time.
-            </h1>
-            <p className="max-w-[700px] mx-auto text-lg md:text-xl text-gray-200 mb-8">
-              E & G Cleannest Facilities Ltd offers premium cleaning solutions for homes and businesses. Experience a new level of clean.
-            </p>
-            <Button size="lg" asChild>
-              <Link href="#quote">
-                Get Your Instant Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+        <section className="relative bg-gradient-to-r from-[#0d3c87] to-[#1e57b1] w-full text-white overflow-hidden">
+          <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-8 items-center min-h-[80vh] py-20">
+            <div className="relative z-10 space-y-6">
+              <p className="font-semibold text-sm tracking-widest text-gray-300 uppercase">■ CLEANER COMPANY</p>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                Create a Clean Space Comparable to Mine.
+              </h1>
+              <p className="max-w-[600px] text-gray-300 text-lg">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                Our Best Offers
+              </Button>
+            </div>
+            
+            <div className="relative h-full flex items-center justify-center">
+              {heroImage && (
+                <Image
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
+                  width={600}
+                  height={800}
+                  className="object-contain"
+                  priority
+                  data-ai-hint={heroImage.imageHint}
+                />
+              )}
+               <div className="absolute right-0 bottom-0 lg:relative lg:bottom-auto lg:right-auto w-full max-w-md">
+                 <QuoteForm />
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-12 md:py-24 bg-secondary/50">
+        <section id="services" className="py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Services</h2>
@@ -77,7 +84,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="flex flex-col items-center text-center p-6 bg-card hover:shadow-xl transition-shadow duration-300">
-                  <div className="p-4 bg-accent rounded-full mb-4">
+                  <div className="p-4 bg-accent/20 rounded-full mb-4">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 font-headline">{service.title}</h3>
@@ -85,13 +92,6 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* AI Quote Generator Section */}
-        <section id="quote" className="py-12 md:py-24">
-          <div className="container px-4 md:px-6">
-            <QuoteForm />
           </div>
         </section>
 
@@ -149,7 +149,7 @@ export default function Home() {
             <div>
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Service Area</h2>
-                <p className="text-muted-foreground mt-2">We proudly serve Kampala, Uganda and surrounding areas.</p>
+                <p className="text-muted-foreground mt-2">We proudly serve New York, NY and surrounding areas.</p>
               </div>
               <ServiceMap />
             </div>
@@ -180,7 +180,7 @@ export default function Home() {
                   <p className="text-muted-foreground mt-2 mb-8">
                     Have questions or need a custom solution? Send us a message and we'll get back to you shortly.
                   </p>
-                  <form action="mailto:egcleannestfacilities@gmail.com" method="post" encType="text/plain" className="space-y-4">
+                  <form action="mailto:example@gmail.com" method="post" encType="text/plain" className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <Input name="name" placeholder="Your Name" required />
                       <Input name="email" type="email" placeholder="Your Email" required />

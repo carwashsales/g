@@ -53,7 +53,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Sarah L.',
     role: 'Homeowner',
-    quote: 'E & G Cleannest Facilities Ltd transformed my home! The team was professional, thorough, and incredibly efficient. I couldn\'t be happier with the results.',
+    quote: 'Neatsp transformed my home! The team was professional, thorough, and incredibly efficient. I couldn\'t be happier with the results.',
     avatarId: 'avatar1',
   },
   {
@@ -65,7 +65,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Maria G.',
     role: 'Property Manager',
-    quote: 'We use E & G Cleannest Facilities Ltd for all our move-in/move-out cleanings. They are reliable, consistent, and always do a fantastic job.',
+    quote: 'We use Neatsp for all our move-in/move-out cleanings. They are reliable, consistent, and always do a fantastic job.',
     avatarId: 'avatar2',
   },
 ];
@@ -86,7 +86,7 @@ export const faqs: Faq[] = [
   },
   {
     question: 'How is the pricing determined?',
-    answer: 'Our pricing is based on the type of service, the size of the space, and the level of cleaning required. You can use our AI-powered quote generator to get an instant estimate.',
+    answer: 'Our pricing is based on the type of service, the size of the space, and the level of cleaning required. You can use our free quote form to get an instant estimate.',
   },
   {
     question: 'Do I need to be home during the cleaning?',
@@ -94,6 +94,6 @@ export const faqs: Faq[] = [
   },
   {
     question: 'What is your service area?',
-    answer: 'We primarily serve the greater Kampala area. You can view our service area map on our website for more specific locations.',
+    answer: 'We primarily serve the greater New York area. You can view our service area map on our website for more specific locations.',
   },
 ];

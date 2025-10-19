@@ -1,66 +1,109 @@
 import Link from 'next/link';
-import { navLinks } from '@/lib/data';
 import { Button } from './ui/button';
-import { Menu } from 'lucide-react';
+import { Menu, Search, MapPin, Mail, Phone, Globe, Facebook, Linkedin, Twitter, Rss } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
 import Logo from './logo';
+import { Input } from './ui/input';
+
+const navLinks = [
+  { href: '#', label: 'Home' },
+  { href: '#', label: 'About' },
+  { href: '#services', label: 'Service' },
+  { href: '#', label: 'Pages' },
+  { href: '#', label: 'Blog' },
+  { href: '#contact', label: 'Contact' },
+];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 max-w-screen-2xl items-center">
-        <div className="mr-4 flex">
-          <div className="mr-6 flex items-center space-x-2">
-            <Logo className="h-12 w-12" />
-            <span className="font-bold font-headline hidden sm:inline-block">E & G Cleannest</span>
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* Top bar */}
+      <div className="bg-secondary/30 text-sm text-muted-foreground">
+        <div className="container px-4 md:px-6 flex h-10 items-center justify-between">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <span>Follow Us:</span>
+              <Link href="#" className="hover:text-primary"><Facebook size={16} /></Link>
+              <Link href="#" className="hover:text-primary"><Linkedin size={16} /></Link>
+              <Link href="#" className="hover:text-primary"><Twitter size={16} /></Link>
+              <Link href="#" className="hover:text-primary"><Rss size={16} /></Link>
+            </div>
+            <div className="hidden md:flex items-center gap-2">
+              <Phone size={16} className="text-primary" />
+              <span>(123) 777 - 5643</span>
+            </div>
           </div>
-          <nav className="hidden items-center gap-6 text-sm md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-2">
+              <MapPin size={16} className="text-primary" />
+              <span>New York, NY 10038, United</span>
+            </div>
+             <div className="hidden md:flex items-center gap-2">
+              <Mail size={16} className="text-primary" />
+              <span>example@gmail.com</span>
+            </div>
+            <div className="hidden sm:flex items-center gap-1">
+              <Globe size={16} />
+              <span>English</span>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      {/* Main navigation */}
+      <div className="container px-4 md:px-6 flex h-20 items-center">
+        <Link href="#" className="mr-6 flex items-center space-x-2">
+          <Logo className="h-8 w-auto" />
+          <span className="font-bold text-xl hidden sm:inline-block">Neatsp</span>
+        </Link>
+        
+        <nav className="hidden items-center gap-6 text-sm lg:flex flex-1 justify-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition-colors hover:text-primary font-medium"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
 
-        {/* Mobile Nav */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-              <div className="flex items-center space-x-2 mb-6">
-                <Logo className="h-12 w-12" />
-                <span className="font-bold font-headline">E & G Cleannest</span>
-              </div>
-              <div className="flex flex-col space-y-2">
-                {navLinks.map((link) => (
-                  <SheetClose asChild key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-foreground/80 hover:text-foreground rounded-md p-2 text-lg"
-                    >
-                      {link.label}
-                    </Link>
-                  </SheetClose>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+        <div className="flex flex-1 items-center justify-end space-x-4">
+           <div className="hidden md:flex items-center relative">
+             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+             <Input placeholder="Search Products..." className="pl-9 bg-secondary/30 border-0" />
+           </div>
 
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button asChild>
-            <Link href="#quote">Get a Free Quote</Link>
-          </Button>
+          {/* Mobile Nav */}
+          <div className="lg:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <div className="flex items-center space-x-2 mb-6">
+                  <Logo className="h-8 w-auto" />
+                  <span className="font-bold text-xl">Neatsp</span>
+                </div>
+                <div className="flex flex-col space-y-2">
+                  {navLinks.map((link) => (
+                    <SheetClose asChild key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-foreground/80 hover:text-primary rounded-md p-2 text-lg"
+                      >
+                        {link.label}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

@@ -1,10 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "hero",
-      "description": "A bright and clean modern living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1725042893312-5ec0dea9e369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMGxpdmluZ3Jvb218ZW58MHx8fHwxNzYwODczNjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "clean livingroom"
+      "id": "hero-cleaner",
+      "description": "A woman with cleaning supplies.",
+      "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMHN0YWZmfGVufDB8fHx8MTc2MDg3MzY4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cleaning staff"
     },
     {
       "id": "avatar1",

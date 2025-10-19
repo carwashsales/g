@@ -3,7 +3,7 @@
 import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 
 export default function ServiceMap() {
-  const position = { lat: 0.3476, lng: 32.5825 }; // Kampala, Uganda
+  const position = { lat: 40.7128, lng: -74.0060 }; // New York, NY
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   if (!apiKey) {
