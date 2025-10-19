@@ -1,16 +1,17 @@
 import Link from 'next/link';
 import { navLinks } from '@/lib/data';
 import { Button } from './ui/button';
-import { Menu, Zap } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
+import Logo from './logo';
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+      <div className="container flex h-20 max-w-screen-2xl items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Zap className="h-6 w-6 text-primary" />
+            <Logo className="h-12 w-12" />
             <span className="font-bold font-headline sm:inline-block">CleanNest Hub</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm md:flex">
@@ -37,7 +38,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <Link href="/" className="flex items-center space-x-2 mb-6">
-                <Zap className="h-6 w-6 text-primary" />
+                <Logo className="h-12 w-12" />
                 <span className="font-bold font-headline">CleanNest Hub</span>
               </Link>
               <div className="flex flex-col space-y-2">
