@@ -31,7 +31,6 @@ import { PlayCircle } from 'lucide-react';
 
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-cleaner');
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-video');
   
@@ -41,24 +40,21 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative w-full text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10" />
-          {heroImage && (
+        <div className="absolute inset-0 bg-blue-900/60 z-10" />
             <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
+              src="/banner.png"
+              alt="Cleaner holding supplies"
               fill
               className="object-cover"
               priority
-              data-ai-hint={heroImage.imageHint}
             />
-          )}
-          <div className="container relative z-20 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-20 px-4 md:px-6">
-            <div className="lg:col-span-3 space-y-6 text-center lg:text-left">
+          <div className="container relative z-20 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-20">
+            <div className="lg:col-span-3 space-y-6 text-center lg:text-left mx-auto">
               <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER COMPANY</p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 "Your Hygiene is Our Priority"
               </h1>
-              <p className="max-w-[600px] text-muted-foreground text-lg mx-auto lg:mx-0">
+              <p className="max-w-[600px] text-lg mx-auto lg:mx-0">
               We offer professional, high-quality cleaning services for your home and office. Our team is dedicated to providing you with a clean and healthy environment.
               </p>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -262,5 +258,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
