@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { faqs, services, testimonials } from '@/lib/data';
+import { faqs, services, testimonials, Testimonial } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -111,14 +111,14 @@ export default function Home() {
               className="w-full max-w-4xl mx-auto"
             >
               <CarouselContent>
-                {testimonials.map((testimonial: any, index) => {
+                {testimonials.map((testimonial: Testimonial, index) => {
                   const avatarImage = PlaceHolderImages.find(img => img.id === testimonial.avatarId);
                   return (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                       <div className="p-1 h-full">
-                        <Card className="h-full flex flex-col bg-card">
-                          <CardContent className="p-6 flex-1 flex flex-col justify-between">
-                            <blockquote className="italic text-muted-foreground mb-6">"{testimonial.quote}"</blockquote>
+                        <Card className="h-full bg-card">
+                          <CardContent className="p-6 flex flex-col justify-between h-full">
+                            <blockquote className="italic text-muted-foreground mb-6 flex-grow">"{testimonial.quote}"</blockquote>
                             <div className="flex items-center">
                               <Avatar className="h-12 w-12 mr-4">
                                 {avatarImage && <AvatarImage src={avatarImage.imageUrl} alt={testimonial.name} data-ai-hint={avatarImage.imageHint} />}

@@ -59,7 +59,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Sarah L.',
     role: 'Homeowner',
-    quote: 'CleanNest Hub transformed my home! The team was professional, thorough, and incredibly efficient. I couldn\'t be happier with the results.',
+    quote: 'E & G Cleannest Facilities Ltd transformed my home! The team was professional, thorough, and incredibly efficient. I couldn\'t be happier with the results.',
     avatarId: 'avatar1',
   },
   {
@@ -71,7 +71,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Maria G.',
     role: 'Property Manager',
-    quote: 'We use CleanNest Hub for all our move-in/move-out cleanings. They are reliable, consistent, and always do a fantastic job.',
+    quote: 'We use E & G Cleannest Facilities Ltd for all our move-in/move-out cleanings. They are reliable, consistent, and always do a fantastic job.',
     avatarId: 'avatar2',
   },
 ];
