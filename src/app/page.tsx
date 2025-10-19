@@ -24,7 +24,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { QuoteForm } from '@/components/quote-form';
-import ServiceMap from '@/components/service-map';
+import VideoGallery from '@/components/video-gallery';
 import type { Testimonial } from '@/lib/types';
 import VideoModal from '@/components/video-modal';
 import { PlayCircle } from 'lucide-react';
@@ -39,15 +39,16 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative w-full text-white overflow-hidden">
-        <div className="absolute inset-0 bg-blue-900/60 z-10" />
+        <section className="relative w-full text-white overflow-hidden bg-blue-900">
+          <div className="absolute inset-0 z-10">
             <Image
-              src="/banner.png"
-              alt="Cleaner holding supplies"
-              fill
-              className="object-cover"
-              priority
-            />
+                src="/banner.png"
+                alt="Cleaner holding supplies"
+                fill
+                className="object-cover"
+                priority
+              />
+          </div>
           <div className="container relative z-20 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-20">
             <div className="lg:col-span-3 space-y-6 text-center lg:text-left mx-auto">
               <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER COMPANY</p>
@@ -62,7 +63,7 @@ export default function Home() {
               </Button>
             </div>
             
-            <div className="lg:col-span-2 w-full hidden lg:block">
+            <div className="lg:col-span-2 w-full">
               <QuoteForm />
             </div>
           </div>
@@ -70,51 +71,49 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="py-12 md:py-16 bg-background">
-          <div className="container px-4 md:px-6">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="relative">
-                {aboutImage && (
-                  <Image
-                    src={aboutImage.imageUrl}
-                    alt={aboutImage.description}
-                    width={550}
-                    height={350}
-                    className="rounded-lg object-cover w-full h-[350px]"
-                    data-ai-hint={aboutImage.imageHint}
-                  />
-                )}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <VideoModal videoUrl="https://www.youtube.com/embed/XMWYZ-uZjnQ">
-                    <button className="group">
-                      <PlayCircle className="h-20 w-20 text-white/70 backdrop-blur-sm rounded-full group-hover:text-white transition-colors group-hover:scale-110" />
-                    </button>
-                  </VideoModal>
+          <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              {aboutImage && (
+                <Image
+                  src={aboutImage.imageUrl}
+                  alt={aboutImage.description}
+                  width={550}
+                  height={350}
+                  className="rounded-lg object-cover w-full h-[350px]"
+                  data-ai-hint={aboutImage.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <VideoModal videoUrl="https://www.youtube.com/embed/XMWYZ-uZjnQ">
+                  <button className="group">
+                    <PlayCircle className="h-20 w-20 text-white/70 backdrop-blur-sm rounded-full group-hover:text-white transition-colors group-hover:scale-110" />
+                  </button>
+                </VideoModal>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-primary" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
+              </h2>
+              <p className="text-muted-foreground">
+                Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
+              </p>
+              <div className="grid grid-cols-3 gap-4 text-center pt-4">
+                <div>
+                  <p className="text-4xl font-bold">200+</p>
+                  <p className="text-muted-foreground text-sm">Satisfied Customers</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-bold">87+</p>
+                  <p className="text-muted-foreground text-sm">Building Cleaned</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-bold">69+</p>
+                  <p className="text-muted-foreground text-sm">Clever Employees</p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                  Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-primary" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
-                </h2>
-                <p className="text-muted-foreground">
-                  Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
-                </p>
-                <div className="grid grid-cols-3 gap-4 text-center pt-4">
-                  <div>
-                    <p className="text-4xl font-bold">200+</p>
-                    <p className="text-muted-foreground text-sm">Satisfied Customers</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl font-bold">87+</p>
-                    <p className="text-muted-foreground text-sm">Building Cleaned</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl font-bold">69+</p>
-                    <p className="text-muted-foreground text-sm">Clever Employees</p>
-                  </div>
-                </div>
-                <Button>Learn More About Us</Button>
-              </div>
+              <Button>Learn More About Us</Button>
             </div>
           </div>
         </section>
@@ -191,15 +190,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Map and FAQ Section */}
+        {/* Video and FAQ Section */}
         <section id="faq" className="py-12 md:py-24 bg-secondary/50">
           <div className="container grid lg:grid-cols-2 gap-12 items-start px-4 md:px-6">
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">Service Area</h2>
-                <p className="text-muted-foreground mt-2">We proudly serve Kampala, Uganda and surrounding areas.</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Work in Action</h2>
+                <p className="text-muted-foreground mt-2">See our cleaning teams transform spaces.</p>
               </div>
-              <ServiceMap />
+              <VideoGallery />
             </div>
             <div>
               <div className="mb-8">
