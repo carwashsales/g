@@ -37,37 +37,34 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-[#0d3c87] to-[#1e57b1] w-full text-white overflow-hidden">
-          <div className="container grid lg:grid-cols-2 gap-8 items-center min-h-[80vh] py-20 px-4 md:px-6">
-            <div className="relative z-10 space-y-6">
-              <p className="font-semibold text-sm tracking-widest text-gray-300 uppercase">■ CLEANER COMPANY</p>
+        <section className="relative w-full text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10" />
+          {heroImage && (
+            <Image
+              src={heroImage.imageUrl}
+              alt={heroImage.description}
+              fill
+              className="object-cover"
+              priority
+              data-ai-hint={heroImage.imageHint}
+            />
+          )}
+          <div className="container relative z-20 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-20 px-4 md:px-6">
+            <div className="lg:col-span-3 space-y-6">
+              <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER COMPANY</p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 "Your Hygiene is Our Priority"
               </h1>
               <p className="max-w-[600px] text-gray-300 text-lg">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              We offer professional, high-quality cleaning services for your home and office. Our team is dedicated to providing you with a clean and healthy environment.
               </p>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 Our Best Offers
               </Button>
             </div>
             
-            <div className="relative h-full flex items-center justify-center">
-               <div className="lg:absolute lg:inset-0 lg:left-1/2">
-                {heroImage && (
-                  <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-contain"
-                    priority
-                    data-ai-hint={heroImage.imageHint}
-                  />
-                )}
-              </div>
-               <div className="relative right-0 bottom-0 lg:relative lg:bottom-auto lg:right-auto w-full max-w-md mt-8 lg:mt-0">
-                 <QuoteForm />
-              </div>
+            <div className="lg:col-span-2 w-full">
+              <QuoteForm />
             </div>
           </div>
         </section>
@@ -84,7 +81,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="flex flex-col items-center text-center p-6 bg-card hover:shadow-xl transition-shadow duration-300">
-                  <div className="p-4 bg-accent/20 rounded-full mb-4">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 font-headline">{service.title}</h3>

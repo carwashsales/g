@@ -66,8 +66,8 @@ export function QuoteForm() {
   }
 
   return (
-    <div className="w-full max-w-md bg-[#0a2752] p-8 rounded-lg shadow-2xl">
-      <h2 className="text-2xl font-bold text-white mb-6 text-center">Request a Free Quote</h2>
+    <div className="w-full bg-card/90 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
+      <h2 className="text-2xl font-bold text-card-foreground mb-6 text-center">Request a Free Quote</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
@@ -76,7 +76,7 @@ export function QuoteForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Your Name" {...field} className="bg-[#1e3a6b] border-slate-600 text-white placeholder:text-gray-400 focus:ring-accent" />
+                  <Input placeholder="Your Name" {...field} className="bg-background/80 border-border text-foreground placeholder:text-muted-foreground focus:ring-primary" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -88,7 +88,7 @@ export function QuoteForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Phone Number" {...field} className="bg-[#1e3a6b] border-slate-600 text-white placeholder:text-gray-400 focus:ring-accent" />
+                  <Input placeholder="Phone Number" {...field} className="bg-background/80 border-border text-foreground placeholder:text-muted-foreground focus:ring-primary" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -101,7 +101,7 @@ export function QuoteForm() {
               <FormItem>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger className="bg-[#1e3a6b] border-slate-600 text-white">
+                    <SelectTrigger className="bg-background/80 border-border text-foreground">
                       <SelectValue placeholder="Select Service Type" />
                     </SelectTrigger>
                   </FormControl>
@@ -126,8 +126,8 @@ export function QuoteForm() {
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "w-full pl-3 text-left font-normal bg-[#1e3a6b] border-slate-600 text-white hover:bg-[#1e3a6b] hover:text-white",
-                          !field.value && "text-gray-400"
+                          "w-full pl-3 text-left font-normal bg-background/80 border-border text-foreground hover:bg-accent/80 hover:text-accent-foreground",
+                          !field.value && "text-muted-foreground"
                         )}
                       >
                         {field.value ? (
@@ -161,13 +161,13 @@ export function QuoteForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Zip Code" {...field} className="bg-[#1e3a6b] border-slate-600 text-white placeholder:text-gray-400 focus:ring-accent" />
+                  <Input placeholder="Zip Code" {...field} className="bg-background/80 border-border text-foreground placeholder:text-muted-foreground focus:ring-primary" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full bg-primary hover:bg-accent" disabled={isPending}>
+          <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isPending}>
             {isPending ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
