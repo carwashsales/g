@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { faqs, services, testimonials } from '@/lib/data';
+import { faqs, services } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -28,6 +28,7 @@ import ServiceMap from '@/components/service-map';
 import type { Testimonial } from '@/lib/types';
 import VideoModal from '@/components/video-modal';
 import { PlayCircle } from 'lucide-react';
+import { testimonials } from '@/lib/data';
 
 
 export default function Home() {
@@ -73,17 +74,17 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-12 md:py-24 bg-background">
+        <section id="about" className="py-12 md:py-16 bg-background">
           <div className="container px-4 md:px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="relative">
                 {aboutImage && (
                   <Image
                     src={aboutImage.imageUrl}
                     alt={aboutImage.description}
                     width={550}
-                    height={650}
-                    className="rounded-lg object-cover w-full h-auto"
+                    height={550}
+                    className="rounded-lg object-cover w-full aspect-square"
                     data-ai-hint={aboutImage.imageHint}
                   />
                 )}
@@ -95,7 +96,7 @@ export default function Home() {
                   </VideoModal>
                 </div>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
                   Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-green-400" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
@@ -103,7 +104,7 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
                 </p>
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-3 gap-4 text-center pt-4">
                   <div>
                     <p className="text-4xl font-bold">200+</p>
                     <p className="text-muted-foreground text-sm">Satisfied Customers</p>
