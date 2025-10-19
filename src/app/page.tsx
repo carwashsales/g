@@ -18,14 +18,13 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { faqs, services } from '@/lib/data';
+import { faqs, services, testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { QuoteForm } from '@/components/quote-form';
 import ServiceMap from '@/components/service-map';
 import { ArrowRight } from 'lucide-react';
-import { testimonials } from '@/lib/data';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
@@ -89,14 +88,14 @@ export default function Home() {
 
         {/* AI Quote Generator Section */}
         <section id="quote" className="py-12 md:py-24">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <QuoteForm />
           </div>
         </section>
 
         {/* Testimonials Section */}
         <section id="testimonials" className="py-12 md:py-24 bg-secondary/50">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">What Our Clients Say</h2>
               <p className="text-muted-foreground mt-2">
@@ -144,7 +143,7 @@ export default function Home() {
 
         {/* Map and FAQ Section */}
         <section id="faq" className="py-12 md:py-24">
-          <div className="container grid lg:grid-cols-2 gap-12 items-start">
+          <div className="container grid lg:grid-cols-2 gap-12 items-start px-4 md:px-6">
             <div>
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Service Area</h2>
@@ -171,7 +170,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-12 md:py-24 bg-secondary/50">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <Card>
               <div className="grid lg:grid-cols-2">
                 <div className="p-8">
