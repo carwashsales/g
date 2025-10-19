@@ -73,24 +73,14 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="py-12 md:py-16 bg-background">
           <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-8 items-center">
-            <div className="relative">
-              {aboutImage && (
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
-                  width={550}
-                  height={350}
-                  className="rounded-lg object-cover w-full h-[350px]"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              )}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <VideoModal videoUrl="https://www.youtube.com/embed/XMWYZ-uZjnQ">
-                  <button className="group">
-                    <PlayCircle className="h-20 w-20 text-white/70 backdrop-blur-sm rounded-full group-hover:text-white transition-colors group-hover:scale-110" />
-                  </button>
-                </VideoModal>
-              </div>
+            <div className="relative rounded-lg overflow-hidden shadow-lg border aspect-video">
+              <video
+                src="/video3.mp4"
+                controls
+                muted
+                loop
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="space-y-4">
               <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
@@ -235,8 +225,7 @@ export default function Home() {
                     </div>
                     <Input name="subject" placeholder="Subject" required />
                     <Textarea name="body" placeholder="Your Message" rows={5} required />
-                    <Button type="submit" className="w-full sm:w-auto">Send Message</Button>
-                  </form>
+                    <Button type="submit" className="w-full sm:w-auto">Send Message</Button>                  </form>
                 </div>
                 <div className="hidden lg:block relative">
                    {contactImage && (
