@@ -28,6 +28,7 @@ import VideoGallery from '@/components/video-gallery';
 import type { Testimonial } from '@/lib/types';
 import VideoModal from '@/components/video-modal';
 import { PlayCircle } from 'lucide-react';
+import { ContactForm } from '@/components/contact-form';
 
 
 // Main Home Page Component
@@ -218,14 +219,7 @@ export default function Home() {
                   <p className="text-muted-foreground mt-2 mb-8">
                     Have questions or need a custom solution? Send us a message and we'll get back to you shortly.
                   </p>
-                  <form action="mailto:egcleannestfacilities@gmail.com" method="post" encType="text/plain" className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <Input name="name" placeholder="Your Name" required />
-                      <Input name="email" type="email" placeholder="Your Email" required />
-                    </div>
-                    <Input name="subject" placeholder="Subject" required />
-                    <Textarea name="body" placeholder="Your Message" rows={5} required />
-                    <Button type="submit" className="w-full sm:w-auto">Send Message</Button>                  </form>
+                  <ContactForm />
                 </div>
                 <div className="hidden lg:block relative">
                    {contactImage && (

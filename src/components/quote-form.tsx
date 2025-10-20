@@ -28,6 +28,7 @@ import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { Calendar } from './ui/calendar';
+import { supabase } from '@/lib/supabaseClient';
 
 const FormSchema = z.object({
   name: z.string().min(1, "Your Name is required."),
@@ -38,7 +39,6 @@ const FormSchema = z.object({
   date: z.date({
     required_error: "A date is required.",
   }),
-  zipCode: z.string().min(1, "Zip Code is required."),
 });
 
 export function QuoteForm() {
@@ -50,19 +50,41 @@ export function QuoteForm() {
     defaultValues: {
       name: '',
       phone: '',
-      zipCode: '',
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    startTransition(() => {
-      // Mock submission
-      console.log(data);
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    if (!supabase) {
       toast({
-        title: 'Quote Requested!',
-        description: 'Thank you. We will get back to you shortly.',
+        title: 'Database not configured',
+        description: 'Please make sure your Supabase credentials are set up correctly.',
+        variant: 'destructive',
       });
-      form.reset();
+      return;
+    }
+    startTransition(async () => {
+      const { error } = await supabase
+        .from('quotes')
+        .insert([{ 
+          name: data.name,
+          phone: data.phone,
+          service_type: data.serviceType,
+          requested_date: data.date,
+        }]);
+
+      if (error) {
+        toast({
+          title: 'Error submitting quote',
+          description: error.message,
+          variant: 'destructive',
+        });
+      } else {
+        toast({
+          title: 'Quote Requested!',
+          description: 'Thank you. We will get back to you shortly.',
+        });
+        form.reset();
+      }
     });
   }
 
@@ -118,8 +140,7 @@ export function QuoteForm() {
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <FormField
+          <FormField
               control={form.control}
               name="date"
               render={({ field }) => (
@@ -159,19 +180,6 @@ export function QuoteForm() {
                 </FormItem>
               )}
             />
-             <FormField
-              control={form.control}
-              name="zipCode"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Zip Code" {...field} className="bg-background/80 border-border text-foreground placeholder:text-muted-foreground focus:ring-primary" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
           <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isPending}>
             {isPending ? (
               <>
@@ -187,5 +195,3 @@ export function QuoteForm() {
     </div>
   );
 }
-
-    
