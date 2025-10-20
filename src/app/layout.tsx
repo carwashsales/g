@@ -5,8 +5,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: 'E & G Cleannest Facilities Ltd',
-  description: 'Professional cleaning services by E & G Cleannest Facilities Ltd.',
+  title: 'E & G Cleannest Facilities',
+  description: 'Professional cleaning services by E & G Cleannest Facilities.',
 };
 
 export default function RootLayout({

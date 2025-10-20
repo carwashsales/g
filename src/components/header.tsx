@@ -127,12 +127,12 @@ export default function Header() {
       
       {/* Main navigation */}
       <div className="container px-4 md:px-6 flex h-20 items-center">
-        <Link href="#" className="mr-6 flex items-center space-x-2">
-          <Logo className="h-8 w-auto" />
-          <span className="font-bold text-lg">E &amp; G Cleannest Facilities</span>
+        <Link href="#" className="mr-auto flex items-center space-x-2">
+          <Logo className="h-16 w-auto" />
+          <span className="font-bold text-base sm:text-xl whitespace-nowrap">E & G Cleannest Facilities</span>
         </Link>
         
-        <nav className="hidden items-center gap-6 text-sm lg:flex flex-1 justify-center">
+        <nav className="hidden items-center gap-6 text-sm lg:flex">
           {navLinks.map((link, index) => (
             <Link
               key={`${link.label}-${index}`}
@@ -144,10 +144,10 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end space-x-2 sm:space-x-4">
-           <div className="flex items-center relative">
+        <div className="flex items-center justify-end space-x-2 sm:space-x-4 ml-4">
+           <div className="hidden md:flex items-center relative">
              <Search className="h-5 w-5 text-muted-foreground" />
-             <Input placeholder="Search Products..." className="hidden md:block pl-9 bg-secondary/30 border-0" />
+             <Input placeholder="Search Products..." className="pl-9 bg-secondary/30 border-0" />
            </div>
 
           {/* Mobile Nav */}
@@ -160,8 +160,8 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="flex items-center space-x-2 mb-6">
-                <Logo className="h-8 w-auto" />
-                <span className="font-bold text-xl">E &amp; G Cleannest Facilities</span>
+                <Logo className="h-16 w-auto" />
+                <span className="font-bold text-xl">E & G Cleannest Facilities</span>
               </div>
               <div className="flex flex-col space-y-2">
                 {navLinks.map((link, index) => (

@@ -41,11 +41,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative w-full text-white overflow-hidden">
-           <div className="absolute inset-0 z-0 bg-slate-900">
-             <Image
-                src="/banner.jpg"
-                alt="A professional cleaner wiping a glass surface, representing quality cleaning services."
+        <section className="relative w-full text-white overflow-hidden bg-blue-900">
+          <div className="absolute inset-0 z-10 opacity-70">
+            <Image
+                src="/banner1.jpg"
+                alt="E & G Cleannest Facilities banner"
                 fill
                 className="object-cover opacity-30"
                 priority
@@ -185,7 +185,7 @@ export default function Home() {
         {/* Video and FAQ Section */}
         <section id="faq" className="py-12 md:py-24 bg-secondary/50">
           <div className="container grid lg:grid-cols-2 gap-12 items-start px-4 md:px-6">
-            <div>
+            <div className="w-full overflow-hidden">
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Work in Action</h2>
                 <p className="text-muted-foreground mt-2">See our cleaning teams transform spaces.</p>
