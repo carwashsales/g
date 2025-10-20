@@ -35,7 +35,6 @@ import { ContactForm } from '@/components/contact-form';
 export default function Home() {
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-video');
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-team');
   
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
@@ -44,16 +43,13 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative w-full text-white overflow-hidden">
            <div className="absolute inset-0 z-0 bg-slate-900">
-             {heroImage && (
-                <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-cover opacity-30"
-                    priority
-                    data-ai-hint={heroImage.imageHint}
-                />
-             )}
+             <Image
+                src="/banner.jpg"
+                alt="A professional cleaner wiping a glass surface, representing quality cleaning services."
+                fill
+                className="object-cover opacity-30"
+                priority
+             />
            </div>
           <div className="container relative z-10 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-12 md:py-20">
             <div className="lg:col-span-3 space-y-6 text-center lg:text-left">

@@ -1,12 +1,6 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-team",
-      "description": "A professional cleaner wiping a glass surface, representing quality cleaning services.",
-      "imageUrl": "https://images.unsplash.com/photo-1603712725038-93c321124234?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGVhbmluZyUyMHNlcnZpY2V8ZW58MHx8fHwxNzYwOTY1ODg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cleaning service"
-    },
-    {
       "id": "avatar1",
       "description": "Avatar of Sarah L.",
       "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzYwODE5MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
