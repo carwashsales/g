@@ -129,7 +129,7 @@ export default function Header() {
       <div className="container px-4 md:px-6 flex h-20 items-center">
         <Link href="#" className="mr-6 flex items-center space-x-2">
           <Logo className="h-8 w-auto" />
-          <span className="font-bold text-xl hidden sm:inline-block">E & G Cleannest</span>
+          <span className="font-bold text-lg">E & G Cleannest Facilities</span>
         </Link>
         
         <nav className="hidden items-center gap-6 text-sm lg:flex flex-1 justify-center">
@@ -161,7 +161,7 @@ export default function Header() {
             <SheetContent side="left">
               <div className="flex items-center space-x-2 mb-6">
                 <Logo className="h-8 w-auto" />
-                <span className="font-bold text-xl">E & G Cleannest</span>
+                <span className="font-bold text-xl">E & G Cleannest Facilities</span>
               </div>
               <div className="flex flex-col space-y-2">
                 {navLinks.map((link, index) => (
