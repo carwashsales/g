@@ -128,7 +128,7 @@ export default function Header() {
       {/* Main navigation */}
       <div className="container px-4 md:px-6 flex h-20 items-center">
         <Link href="#" className="mr-auto flex items-center space-x-2">
-          <Logo className="h-8 w-auto" />
+          <Logo className="h-12 w-auto" />
           <span className="font-bold text-base sm:text-xl whitespace-nowrap">E & G Cleannest Facilities</span>
         </Link>
         
@@ -160,7 +160,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="flex items-center space-x-2 mb-6">
-                <Logo className="h-8 w-auto" />
+                <Logo className="h-12 w-auto" />
                 <span className="font-bold text-xl">E & G Cleannest Facilities</span>
               </div>
               <div className="flex flex-col space-y-2">
