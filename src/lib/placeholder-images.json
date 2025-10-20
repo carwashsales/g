@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-team",
-      "description": "A team of professional cleaners in uniform, smiling and ready to work.",
-      "imageUrl": "https://images.unsplash.com/photo-1628177206412-173623531548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbGVhbmluZyUyMHRlYW18ZW58MHx8fHwxNzYwODg0MDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cleaning team"
+      "description": "A professional cleaner wiping a glass surface, representing quality cleaning services.",
+      "imageUrl": "https://images.unsplash.com/photo-1603712725038-93c321124234?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGVhbmluZyUyMHNlcnZpY2V8ZW58MHx8fHwxNzYwOTY1ODg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cleaning service"
     },
     {
       "id": "avatar1",
