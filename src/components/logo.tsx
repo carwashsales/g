@@ -8,7 +8,7 @@ type LogoProps = {
 const Logo = ({ className }: LogoProps) => (
   <Image
     src="/logo.png"
-    alt="E & G Cleanest Facilities Ltd Logo"
+    alt="E & G Cleannest Facilities Ltd Logo"
     width={200}
     height={200}
     className={cn(className)}
