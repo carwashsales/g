@@ -156,7 +156,7 @@ export default function Home() {
                   return (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                       <div className="p-1 h-full">
-                        <Card className="h-full bg-card">
+                        <Card className="h-full bg-card hover:shadow-xl transition-shadow duration-300">
                           <CardContent className="p-6 flex flex-col justify-between h-full">
                             <blockquote className="italic text-muted-foreground mb-6 flex-grow">"{testimonial.quote}"</blockquote>
                             <div className="flex items-center">
