@@ -35,24 +35,28 @@ import { ContactForm } from '@/components/contact-form';
 export default function Home() {
   const contactImage = PlaceHolderImages.find((img) => img.id === 'contact');
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-video');
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-team');
   
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative w-full text-white overflow-hidden bg-blue-900">
-          <div className="absolute inset-0 z-10">
-            <Image
-                src="/banner.png"
-                alt="Cleaner holding supplies"
-                fill
-                className="object-cover"
-                priority
-              />
-          </div>
-          <div className="container relative z-20 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-20">
-            <div className="lg:col-span-3 space-y-6 text-center lg:text-left mx-auto">
+        <section className="relative w-full text-white overflow-hidden">
+           <div className="absolute inset-0 z-0 bg-slate-900">
+             {heroImage && (
+                <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    fill
+                    className="object-cover opacity-30"
+                    priority
+                    data-ai-hint={heroImage.imageHint}
+                />
+             )}
+           </div>
+          <div className="container relative z-10 grid lg:grid-cols-5 gap-8 items-center min-h-[80vh] py-12 md:py-20">
+            <div className="lg:col-span-3 space-y-6 text-center lg:text-left">
               <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER COMPANY</p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 "Your Hygiene is Our Priority"
