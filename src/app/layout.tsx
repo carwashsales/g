@@ -4,8 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: 'E & G Cleanest Facilities Ltd',
-  description: 'Professional cleaning services by E & G Cleanest Facilities Ltd.',
+  title: 'E & G Cleannest Facilities',
+  description: 'Professional cleaning services by E & G Cleannest Facilities.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth dark">
+    <html lang="en" className="!scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
