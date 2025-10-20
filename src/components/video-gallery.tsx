@@ -1,20 +1,54 @@
+'use client';
+import Autoplay from 'embla-carousel-autoplay';
+import * as React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function VideoGallery() {
-  const videos = ['/video1.mp4', '/video2.mp4'];
+  const videos = [
+    '/vid (1).mp4',
+    '/vid (2).mp4',
+    '/vid (3).mp4',
+    '/vid (4).mp4',
+  ];
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
-      {videos.map((videoSrc, index) => (
-        <div key={index} className="rounded-lg overflow-hidden shadow-lg border aspect-video">
-          <video
-            src={videoSrc}
-            controls
-            muted
-            loop
-            className="w-full h-full object-cover"
-          />
-        </div>
-      ))}
-    </div>
+    <Carousel
+      plugins={[plugin.current]}
+      className="w-full"
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+      opts={{
+        loop: true,
+      }}
+    >
+      <CarouselContent>
+        {videos.map((videoSrc, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <div className="rounded-lg overflow-hidden shadow-lg border aspect-video">
+                <video
+                  src={videoSrc}
+                  controls
+                  muted
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 }

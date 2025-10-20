@@ -185,7 +185,7 @@ export default function Home() {
         {/* Video and FAQ Section */}
         <section id="faq" className="py-12 md:py-24 bg-secondary/50">
           <div className="container grid lg:grid-cols-2 gap-12 items-start px-4 md:px-6">
-            <div>
+            <div className="w-full overflow-hidden">
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Work in Action</h2>
                 <p className="text-muted-foreground mt-2">See our cleaning teams transform spaces.</p>
