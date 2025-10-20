@@ -1,6 +1,6 @@
 
 export default function VideoGallery() {
-  const videos = ['/video1.mp4', '/video3.mp4'];
+  const videos = ['/video1.mp4', '/video2.mp4'];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
