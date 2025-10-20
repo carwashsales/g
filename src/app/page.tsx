@@ -42,9 +42,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative w-full text-white overflow-hidden bg-blue-900">
-          <div className="absolute inset-0 z-10">
+          <div className="absolute inset-0 z-10 opacity-70">
             <Image
-                src="/banner.jpg"
+                src="/banner1.jpg"
                 alt="E & G Cleannest Facilities banner"
                 fill
                 className="object-cover"
