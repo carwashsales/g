@@ -38,8 +38,10 @@ export default function VideoGallery() {
               <div className="rounded-lg overflow-hidden shadow-lg border aspect-video">
                 <video
                   src={videoSrc}
-                  controls
+                  autoPlay
                   muted
+                  loop
+                  playsInline
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -47,8 +49,8 @@ export default function VideoGallery() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="sm:inline-flex" />
+      <CarouselNext className="sm:inline-flex" />
     </Carousel>
   );
 }
