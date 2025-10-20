@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -7,7 +8,7 @@ type LogoProps = {
 
 const Logo = ({ className }: LogoProps) => (
   <Image
-    src="/logo.png"
+    src="/logo.jpg"
     alt="E & G Cleannest Facilities Logo"
     width={200}
     height={200}

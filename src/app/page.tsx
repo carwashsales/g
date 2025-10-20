@@ -44,8 +44,8 @@ export default function Home() {
         <section className="relative w-full text-white overflow-hidden bg-blue-900">
           <div className="absolute inset-0 z-10">
             <Image
-                src="/banner.png"
-                alt="Cleaner holding supplies"
+                src="/banner.jpg"
+                alt="E & G Cleannest Facilities banner"
                 fill
                 className="object-cover"
                 priority
