@@ -84,12 +84,12 @@ export default function Home() {
               />
             </div>
             <div className="space-y-4">
-              <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ CLEANER FACTORY</p>
+              <p className="font-semibold text-sm tracking-widest text-primary uppercase">■ ABOUT OUR COMPANY</p>
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                Cleaning <span className="relative inline-block">Mixture<svg className="absolute bottom-0 left-0 w-full h-2 text-primary" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> From System Cleaner Delivers.
+                Exceptional Cleaning <span className="relative inline-block">Services<svg className="absolute bottom-0 left-0 w-full h-2 text-primary" viewBox="0 0 100 8" preserveAspectRatio="none"><path d="M0,4 C25,8 75,0 100,4" stroke="currentColor" strokeWidth="2" fill="none"/></svg></span> for Your Space.
               </h2>
               <p className="text-muted-foreground">
-                Fusce egestas viverra libero eu elementum. Maecenas sit amet lorem nec eros ullamcorper Vivamus finibus lacinia erat, tristique ligula odio maximus ultricies fermentum egestas.
+                We are committed to delivering top-quality cleaning solutions tailored to your needs. Our experienced team uses eco-friendly products to ensure a safe and spotless environment for your home or business.
               </p>
               <div className="grid grid-cols-3 gap-4 text-center pt-4">
                 <div>
