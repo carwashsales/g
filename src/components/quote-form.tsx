@@ -69,7 +69,7 @@ export function QuoteForm() {
           name: data.name,
           phone: data.phone,
           service_type: data.serviceType,
-          requested_date: data.date,
+          requested_date: data.date.toISOString(),
         }]);
 
       if (error) {
