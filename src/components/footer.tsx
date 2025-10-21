@@ -40,6 +40,8 @@ export default function Footer() {
            <div>
             <h3 className="font-semibold font-headline mb-4">Legal</h3>
             <ul className="space-y-2">
+              <li><Link href="/Certificate of incorporation.png" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Certificate of Incorporation</Link></li>
+              <li><Link href="/Certificate of registration.png" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Certificate of Registration</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
             </ul>
@@ -52,5 +54,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-    
